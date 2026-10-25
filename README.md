@@ -1,15 +1,23 @@
 # plainmaps
 
-Small MIT lookup tables. A code that is not officially assigned returns `None`.
+Small, dependency-free lookup tables for standard codes, released under the MIT license. Codes that are not officially assigned return `None`.
+
+## Usage
 
 ```python
-from plainmaps import country_name
+from plainmaps import country_name, currency_name
 
-country_name("DE")  # "Germany"
-country_name("US")  # "United States"
-country_name("XK")  # None. Not an official ISO 3166-1 code.
+country_name("DE")    # "Germany"
+country_name("US")    # "United States"
+country_name("XK")    # None (not an ISO 3166-1 code)
+
+currency_name("EUR")  # "Euro"
 ```
 
-Read [DISCLAIMER.md](DISCLAIMER.md) before adding a table. Do not copy data from a non-permissive project and relicense it.
+## Contributing
 
-Not published to PyPI yet. Publishing needs a PyPI token from the repo owner.
+New tables are welcome. Please see [DISCLAIMER.md](DISCLAIMER.md) for what the data covers and where it may come from.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
