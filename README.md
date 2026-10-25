@@ -1,17 +1,20 @@
 # plainmaps
 
-Small, dependency-free lookup tables for standard codes, released under the MIT license. Codes that are not officially assigned return `None`.
+A small, dependency-free collection of lookup tables for standard codes, released under the MIT license. Codes that are not officially assigned return `None`.
 
 ## Usage
 
 ```python
-from plainmaps import country_name, currency_name
+from plainmaps import alpha3, country_name, currency_name, numeric
 
 country_name("DE")    # "Germany"
 country_name("US")    # "United States"
 country_name("XK")    # None (not an ISO 3166-1 code)
 
 currency_name("EUR")  # "Euro"
+
+alpha3("DE")          # "DEU"
+numeric("DE")         # "276"
 ```
 
 ## Contributing
